@@ -1,0 +1,328 @@
+body{
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    flex-wrap: wrap;
+    overflow-x: wrap;
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+}
+
+.top-logo{
+    margin:0;
+    padding:0;
+    height:15vh;
+    width: 100vw;
+    align-items: center;
+}
+.top-logo img{
+    height:15vh;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 15vh;
+}
+
+.nav{
+    position: -webkit-sticky;
+  position: sticky;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 45px;
+    padding: 10px 100px;
+    box-sizing: border-box;
+    transition:0.8s;
+    z-index:1000;
+    
+}
+
+
+/* #leegumDesc{
+   padding-top: 15vh;
+    
+} */
+
+@media screen and (max-width: 500px) {
+  nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 60px;
+    padding: 10px 10px;
+    box-sizing: border-box;
+    transition:0.8s;
+    z-index:1000;
+    overflow: auto;
+    align-items: center;
+  }
+}
+
+.nav .logo{
+    float: left;
+    padding-top: 0;
+    margin-top:0;
+    
+}
+
+
+
+.nav .logo img{
+    height: 40px;
+    position: relative;
+    top: 0;
+    transition:0.8s;
+    
+} 
+
+.nav ul{
+    
+    display: flex;
+    
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+}
+
+
+.nav ul li{
+    list-style: none;
+}
+
+.nav ul li a{  
+    line-height: 30px;
+    padding: 0px 20px; 
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 14px;
+    transition:0.8s;
+    text-decoration: none;
+    color: #4CAF50;
+
+    
+}
+
+.nav ul li a:hover,
+.nav ul li a.active{
+    color: #00796B;
+    
+    
+}
+
+
+@media screen and (max-width: 500px){
+  /* nav .logo{
+    float: left;
+} */
+
+/* nav .logo img{
+    height: 50px; 
+    transition:0.8s;
+} */
+
+
+.nav ul{
+    float: center;
+    display: flex;
+    margin: 0;
+    padding: 0;
+
+}
+
+
+nav ul li{
+    list-style: none;
+}
+
+.nav ul li a{
+    line-height: 30px;
+    padding: 5px 10px; 
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 12px;
+    transition:0.8s;
+    color:#fff;
+
+    
+}
+
+nav ul li a:hover,
+nav ul li a.active{
+    color:#00796B;
+    
+    
+}
+}
+
+
+section.sec1{
+    width:100vw;
+    height: 75vh;
+    background-size: cover;
+    /* svg viewBox="0"; */
+}
+
+.wrapper{
+     width:50vw; 
+    color:rgb(226, 155, 21);
+    position: absolute;
+    top:65%;
+    left:30%;
+    
+    transform:translate(-50%,-50%)
+}
+
+
+.wrapper h1{
+    text-shadow: 0 2px 0 rgba(0,0,0,0.65);
+    font-size: 60px;
+    font-weight: 600;
+}
+
+.wrapper p{
+    font-size: 25px;
+}
+
+.wrapper img{
+  height: 100px;
+}
+
+/* .screenshot-image{
+    padding: 0 0 0 0;
+    margin: 0 0 0 0;
+    position:absolute;
+    top:23%;
+    right:0%;
+    
+} */
+.screenshot-image { 
+    position: relative;
+    animation-name: floating;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    margin-left: auto;
+    margin-top: 5px;
+}
+ 
+@keyframes floating {
+    0% { transform: translate(0,  0px); }
+    50%  { transform: translate(0, 15px); }
+    100%   { transform: translate(0, -0px); }   
+}
+.screenshot-image img{
+    height: 500px;
+    width:auto;
+}
+
+#span1:before{
+    content:'';
+    animation:animate infinite 5s;
+}
+
+@media screen and (max-width: 500px){
+  .wrapper h1{
+    text-shadow: 0 2px 0 rgba(0,0,0,0.65);
+    font-size: 40px;
+}
+  .wrapper p{
+    font-size: 15px;
+}
+}
+
+@keyframes animate{
+    0%{
+        content:'Order';
+    }
+
+
+    75%{
+        content:'PickUp';}
+    100%{
+        content:'Order';}
+}
+
+#shopImage {
+    width: 25vw;
+    height:auto;
+    margin-left:5vw;
+
+  }
+
+
+* {
+  box-sizing: border-radius;
+  font-family: 'Rubik', sans-serif;
+}
+
+
+
+.cards-list {
+    z-index: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  
+  .cards {
+    margin: 30px;
+    width: 300px;
+    height: 300px;
+    border-radius: 40px;
+  box-shadow: 5px 5px 30px 7px rgba(0,0,0,0.25), -5px -5px 30px 7px rgba(0,0,0,0.22);
+    cursor: pointer;
+    transition: 0.4s;
+  }
+  
+  .cards .card_image {
+    width: inherit;
+    height: inherit;
+    border-radius: 40px;
+  }
+  
+  .cards .card_image img {
+    width: inherit;
+    height: inherit;
+    border-radius: 40px;
+    object-fit: cover;
+  }
+  
+  .cards .card_title {
+    text-align: center;
+    border-radius: 0px 0px 40px 40px;
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 30px;
+    margin-top: -80px;
+    height: 40px;
+  }
+  
+  .cards:hover {
+    transform: scale(0.9, 0.9);
+    box-shadow: 5px 5px 30px 15px rgba(0,0,0,0.25), 
+      -5px -5px 30px 15px rgba(0,0,0,0.22);
+  }
+  
+  .title-white {
+    color: white;
+  }
+  
+  .title-black {
+    color: black;
+  }
+  
+  @media all and (max-width: 500px) {
+    .card-list {
+      /* On small screens, we are no longer using row direction but column */
+      flex-direction: column;
+    }
+  }
+  
+
+
